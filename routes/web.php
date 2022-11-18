@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome3');
+    return view('home');
 });
 
-Route::get('/', function () {
-    return view('welcome1');
-});
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
 
+Route::post('/loginSubmit', [UserController::class, 'login']);
