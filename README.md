@@ -6,10 +6,12 @@ git push
 
 git pull origin|main dev-...
 
-// Connect to existing branch
+Connect to existing branch
+
 git checkout frontend-login
 
-// Connect to new branch
+Connect to new branch
+
 git checkout -B|-b frontend-login
 
 git push --set-upstream origin|dev-... dev-...
