@@ -18,11 +18,11 @@
     position: absolute;
     top: -25%;
     right: -25%;
-    color: var(--theme-color);
+    color: #fff;
     margin: 0;
     padding: 0;
-    background-color: var(--text-color);
-    font-size: 1em;
+    background-color: var(--theme-color);
+    font-size: 1.3em;
     border-radius: 5rem;
     width: 3ch;
     height: 3ch;
