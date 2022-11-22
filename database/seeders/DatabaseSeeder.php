@@ -43,17 +43,23 @@ class DatabaseSeeder extends Seeder
         // Product Create
         $product = DB::table('product')->insert([
             'name' => 'product',
+            'pdf_file' => '14764484345677.jpg',
             'info' => 'info for product',
             'image' => '456789876543.jpg',
             'author' => 'Zayro',
             'price' => 23.43,
             'stock' => 21,
+            'sales' => 10,
             'user_id' => 3
         ]);
 
         $purchased = DB::table('purchased')->insert([
             'user_id' => 2,
             'product_id' => 1
+        ]);
+
+        $category = DB::table('category')->insert([
+            'name' => 'pietsnot'
         ]);
     }
 }

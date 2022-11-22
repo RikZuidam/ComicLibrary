@@ -24,3 +24,40 @@ php artisan migrate
 
 php artisan make:seeder UserSeeder
 php artisan db:seed
+
+Aantekeningen :
+
+components :
+layout
+card
+message
+
+partials :
+.banner
+
+ALGEMEEN :
+home
+admin-panel
+
+USER :
+register
+login
+profiel
+wachtwoord-vergeten
+
+PRODUCT :
+index
+create
+read ($id)
+show
+edit ($id)
+
+PAYMENT :
+Checkout
+
+API :
+Mail (Sendgrid)
+- Account activeren
+- Betaling
+
+Betalen (Stripe)
