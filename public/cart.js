@@ -3,28 +3,27 @@ class ShoppingCart{
         // create cart based on cookies and empty if it doesnt exist
         const cookiecart = this.#getCookie("cart");
         cookiecart ? this.cart = cookiecart : this.cart = [];
-        
     }
     /**
-     * adds the itemID or array of itemID's to cart
-     * @param {Number} itemId product ID/ID's to be added
+     * adds the productId or array of productId's to cart
+     * @param {Number} productId product ID/ID's to be added
      */
-    addCartItem(itemId){
-        if(typeof itemId === "number"){
-            this.cart.push(itemId);
-        }else if(typeof itemId === "object"){
-            itemId.forEach(e => {
+    addCartItem(productId){
+        if(typeof productId === "number"){
+            this.cart.push(productId);
+        }else if(typeof productId === "object"){
+            productId.forEach(e => {
                 this.cart.push(e);
             });
         }
         this.saveCart();
     }
     /**
-     * remove itemid from cart
-     * @param {Number} itemId product ID to be deleted
+     * remove productId from cart
+     * @param {Number} productId product ID to be deleted
      */
-    removeCartItem(itemId){
-        const index = this.cart.indexOf(itemId);
+    removeCartItem(productId){
+        const index = this.cart.indexOf(productId);
         if(index > -1) this.cart.splice(index, 1);
         this.saveCart();
     }
@@ -58,7 +57,6 @@ class ShoppingCart{
         const parts = value.split(`; ${name}=`);
         if(parts.length === 2) return JSON.parse(decodeURIComponent(parts.pop().split(';').shift()))
     }
-    
     /**
      * Add click listener to all elements with "add-to-cart" attribute,
      * When the registered button is pressed it adds the attribute value to the cart
@@ -72,8 +70,6 @@ class ShoppingCart{
         });
     }
 }
-
-
 
 const cart = new ShoppingCart();
 
