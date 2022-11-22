@@ -60,8 +60,8 @@ class ShoppingCart{
     }
     
     /**
-     * Add click listener to all elements with "add-to-cart" attribute
-     * When button is pressed adds the attribute value to the cart
+     * Add click listener to all elements with "add-to-cart" attribute,
+     * When the registered button is pressed it adds the attribute value to the cart
      */
     addCartListeners(){
         const addToCartButtons = document.querySelectorAll("*[add-to-cart]");
@@ -88,3 +88,4 @@ if(document.readyState === "complete" || document.readyState === "interactive"){
 // cart.addCartItem(55); // add productID to cart
 // cart.removeCartItem(55); // remove productID from cart
 // cart.getCartContents(); // get array of productIDs from cart
+// cart.addCartListeners(); // adds click listeners to all elements containing the "add-to-cart" attribute
