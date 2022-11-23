@@ -18,13 +18,12 @@ class UserController extends Controller
 
     public function register()
     {
-        return view('user.register');
+
     }
 
     public function create(Request $request)
     {
-        //
-        // Auth
+        
     }
 
     public function login()
@@ -34,18 +33,35 @@ class UserController extends Controller
 
     public function read(Request $request)
     {
-        //
-        // Auth
-        // Test if email_verified_at isn't NULL/empty
+        // Validate Formfields
+        $formFields = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+
+        // Authenticate
+        if(auth()->attempt($formFields)) {
+            $request->session()->regenerate();
+
+            // Admin / User
+            if(auth()->user()->role == 2) {
+                return redirect('/admin-panel')->with('message', 'Youre an admin!');
+            } else {
+                return redirect('/')->with('message', 'You are now logged in!');
+            } 
+            
+        }
+
+        return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
     }
 
     public function show()
     {
-        return view('user.profile')->with('user', $user[0]);
+        
     }
 
     public function edit(Request $request)
     {
-        return redirect('/')->with('message', 'User-settings succesfully changed!');
+        
     }
 }
