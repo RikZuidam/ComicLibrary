@@ -25,3 +25,5 @@ Route::post('/registerSubmit', [UserController::class, 'create']);
 Route::get('/login', [UserController::class, 'login'])->name('login');
 
 Route::post('/loginSubmit', [UserController::class, 'read']);
+
+Route::get('/logout', [UserController::class, 'logout']);
