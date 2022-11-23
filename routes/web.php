@@ -26,6 +26,10 @@ Route::get('/login', [UserController::class, 'login'])->name('login');
 
 Route::post('/loginSubmit', [UserController::class, 'read']);
 
+Route::get("/cart", function(){
+    return view("cart");
+});
+
 // TODO add a /cart route for cart overview
 // also if not logged in make them create an account before buying
 // users can still preview their order/price/cart before making the account
