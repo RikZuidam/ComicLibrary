@@ -51,23 +51,21 @@ class UserController extends Controller
 
     public function login()
     {
-        return view('user.login');
+        
     }
 
     public function read(Request $request)
     {
-        //
-        // Auth
-        // Test if email_verified_at isn't NULL/empty
+        
     }
 
     public function show()
     {
-        return view('user.profile')->with('user', $user[0]);
+        
     }
 
     public function edit(Request $request)
     {
-        return redirect('/')->with('message', 'User-settings succesfully changed!');
+        
     }
 }
