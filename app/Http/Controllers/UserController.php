@@ -26,7 +26,7 @@ class UserController extends Controller
         // Validate Formfields
         $formFields = $request->validate([
             'name' => ['required', 'min:3'],
-            'email' => ['required', 'email', Rule::unique('authenticate', 'email')],
+            'email' => ['required', 'email', Rule::unique('user', 'email')],
             'password' => 'required|confirmed|min:3'
         ]);
 
