@@ -1,5 +1,32 @@
+/* theme colors */
 :root{
-    --background-color: #111;
-    --text-color: #fff;
-    --theme-color: rgb(255, 133, 19);
+    --header-color: #fff;
+    --background-color: #fff;
+    --text-color: #111;
+    --theme-color: rgb(224, 83, 32);
+    --font: 'Noto Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+body, html{
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: var(--font);
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    background-image: var(--background-ashpalt-texture);
+}
+p, a, h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+}
+a{
+    text-decoration: underline;
 }
