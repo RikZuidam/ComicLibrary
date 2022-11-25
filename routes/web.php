@@ -26,12 +26,8 @@ Route::get('/login', [UserController::class, 'login'])->name('login');
 
 Route::post('/loginSubmit', [UserController::class, 'read']);
 
-<<<<<<< HEAD
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
-=======
-Route::get('/logout', [UserController::class, 'logout']);
 
 Route::get("/cart", function(){
     return view("cart");
 });
->>>>>>> e726b12a12f495c6367fb7cddb996888c72c8290
