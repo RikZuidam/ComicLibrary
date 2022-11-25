@@ -26,4 +26,4 @@ Route::get('/login', [UserController::class, 'login'])->name('login');
 
 Route::post('/loginSubmit', [UserController::class, 'read']);
 
-Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
