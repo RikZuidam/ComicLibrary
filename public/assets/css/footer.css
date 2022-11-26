@@ -1,0 +1,10 @@
+main{
+    min-height: calc(100vh - 3.5rem);
+}
+footer{
+    width: 100%;
+    height: fit-content;
+    border-top: 1px solid rgb(230, 230, 230);
+    background-color: var(--footer-color);
+    padding: 3rem 0;
+}

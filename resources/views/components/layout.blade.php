@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/cart.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/footer.css') }}">
     <script src="{{ asset('/assets/js/cart.js') }}"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <title>ComicLibrary</title>
@@ -31,6 +32,8 @@
     <main>
         {{ $slot }}
     </main>
-    <footer></footer>
+    <footer>
+        
+    </footer>
 </body>
 </html>
