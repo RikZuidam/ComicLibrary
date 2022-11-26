@@ -33,7 +33,23 @@
         {{ $slot }}
     </main>
     <footer>
-        
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter-signup">
+            <form></form>
+        </div>
     </footer>
 </body>
 </html>
