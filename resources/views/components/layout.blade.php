@@ -14,15 +14,18 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/header.css') }}">
     <script src="{{ asset('/assets/js/cart.js') }}"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <title>Document</title>
+    <title>ComicLibrary</title>
 </head>
 <body>
     <header>
         <a href="/">ComicLibrary</a>
         <div class="header-links">
-            <a href="#">Item</a>
-            <a href="#">Item</a>
-            <a href="#">Item</a>
+            <a href="/shop">Shop</a>
+            <a href="/library">Library</a>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
         </div>
     </header>
     <main>
