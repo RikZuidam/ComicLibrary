@@ -31,3 +31,15 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get("/cart", function(){
     return view("cart");
 });
+
+Route::get("/shop", function(){
+    return view("shop");
+});
+
+Route::get("/library", function(){
+    return view("library");
+});
+
+Route::get("/profile", function(){
+    return view("profile");
+});

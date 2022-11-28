@@ -12,22 +12,44 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/cart.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/footer.css') }}">
     <script src="{{ asset('/assets/js/cart.js') }}"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <title>Document</title>
+    <title>ComicLibrary</title>
 </head>
 <body>
     <header>
         <a href="/">ComicLibrary</a>
         <div class="header-links">
-            <a href="#">Item</a>
-            <a href="#">Item</a>
-            <a href="#">Item</a>
+            <a href="/shop">Shop</a>
+            <a href="/library">Library</a>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
         </div>
     </header>
     <main>
         {{ $slot }}
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Text</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter-signup">
+            <form></form>
+        </div>
+    </footer>
 </body>
 </html>

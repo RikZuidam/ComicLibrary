@@ -37,5 +37,5 @@ header > .header-links > a:not(:last-child){
     padding-right: .5rem;
 }
 main{
-    padding-top: 3.5rem
+    margin-top: 3.5rem
 }
