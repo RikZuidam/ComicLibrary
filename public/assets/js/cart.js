@@ -10,10 +10,16 @@ class ShoppingCart{
      */
     addCartItem(productId){
         if(typeof productId === "number"){
-            this.cart.push(productId);
+            // check if cart already contains the value
+            if(!this.cart.includes(productId)){
+                this.cart.push(productId);
+            }
         }else if(typeof productId === "object"){
             productId.forEach(e => {
-                this.cart.push(e);
+                // check if cart already contains the value
+                if(!this.cart.includes(e)){
+                    this.cart.push(e);
+                }
             });
         }
         this.updateCartCount();
@@ -75,7 +81,7 @@ class ShoppingCart{
         const addToCartButtons = document.querySelectorAll("[add-to-cart]");
         addToCartButtons.forEach(e => {
             e.addEventListener("click", (e)=>{
-                this.addCartItem(Number(e.target.getAttribute("add-to-cart")));
+                this.addCartItem(Number(e.target.closest("svg").getAttribute("add-to-cart")));
             })
         });
     }
