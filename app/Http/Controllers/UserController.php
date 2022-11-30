@@ -51,7 +51,7 @@ class UserController extends Controller
 
     public function login()
     {
-        return view('login');
+        return view('user.login');
     }
 
     public function read(Request $request)
@@ -68,7 +68,7 @@ class UserController extends Controller
 
             // Admin / User
             if(auth()->user()->role == 2) {
-                return redirect('/admin-panel')->with('message', 'Youre an admin!');
+                return redirect('/adminpanel')->with('message', 'Youre an admin!');
             } else {
                 return redirect('/')->with('message', 'You are now logged in!');
             } 

@@ -19,14 +19,16 @@ Route::get('/', function() {
 });
 
 Route::get('/register', [UserController::class, 'register'])->name('register');
-
-Route::post('/registerSubmit', [UserController::class, 'create']);
+Route::post('/register', [UserController::class, 'create']);
 
 Route::get('/login', [UserController::class, 'login'])->name('login');
-
-Route::post('/loginSubmit', [UserController::class, 'read']);
+Route::post('/login', [UserController::class, 'read']);
 
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+
+Route::get('/adminpanel', function() {
+    return view('adminpanel');
+});
 
 Route::get("/cart", function(){
     return view("cart");
