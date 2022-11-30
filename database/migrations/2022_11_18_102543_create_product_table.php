@@ -18,10 +18,11 @@ class CreateProductTable extends Migration
             $table->text('pdf_file');
             $table->string('name');
             $table->text('info');
-            $table->string('image');
+            $table->text('images');
             $table->string('author')->nullable();
             $table->decimal('price', 5, 2);
-            $table->integer('category_id')->nullable();
+            $table->text('tag_ids')->nullable();
+            $table->text('category_ids')->nullable();
             $table->integer('stock')->nullable();
             $table->integer('sales')->nullable();
             $table->integer('user_id');

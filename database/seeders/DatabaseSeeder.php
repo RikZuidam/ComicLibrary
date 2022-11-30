@@ -45,9 +45,15 @@ class DatabaseSeeder extends Seeder
             'name' => 'product',
             'pdf_file' => '14764484345677.jpg',
             'info' => 'info for product',
-            'image' => '456789876543.jpg',
+            'images' => '456789876543.jpg',
             'author' => 'Zayro',
             'price' => 23.43,
+            'tag_ids' => json_encode([
+                3, 15, "penis"
+            ]),
+            'category_ids' => json_encode([
+                777, 'horror'
+            ]),
             'stock' => 21,
             'sales' => 10,
             'user_id' => 3
